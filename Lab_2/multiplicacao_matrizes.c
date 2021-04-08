@@ -4,7 +4,7 @@
 #include<stdlib.h>
 #include<pthread.h>
 #include<stdbool.h>
-#include "timer.h"
+#include "../Utilitarios/timer.h"
 
 int numero_threads;
 float *matriz;
