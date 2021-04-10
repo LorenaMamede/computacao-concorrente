@@ -36,9 +36,9 @@ void * calcula_pi(void * arg){
 }
 
 int main(int argc, char *argv[]){
-	pthread_t *tid;
-	double *retorno;
-	double soma_pi_conc;
+	pthread_t *tid; //identificacao das threads
+	double *retorno; //retorno da soma parcial de pi  de cada thread
+	double soma_pi_conc; //soma global
 
 	//validar e capturar entradas
 	if(argc<3){
@@ -47,6 +47,7 @@ int main(int argc, char *argv[]){
 	}
 	numero_elementos = atoll(argv[1]);
 	numero_threads = atoi(argv[2]);
+	if(numero_threads > numero_elementos) numero_threads = numero_elementos; 
 
 	//alocar memorica
 	tid = (pthread_t *) malloc(sizeof(pthread_t) * numero_threads);
