@@ -27,6 +27,8 @@ int main(){
 	char entrada;
 
 	vetorEntrada = alocarVetor(tamanhoVetor);
+
+	puts("Forneca um vetor de entrada inserindo os numero separados por espaço\nExemplo: 1 2 3 4\n");
 	while(scanf("%c", &entrada) && (entrada != '\n')){
 		if(entrada == ' ') continue;
 		*(vetorEntrada+posicaoVetor) = entrada - '0';
