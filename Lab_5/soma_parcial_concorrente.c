@@ -142,7 +142,7 @@ void * calcularSomaParcial(void* args){
 	for(int i=1; i<tamanhoVetor;i*=2){
 		escreveram=0;
 
-		printf("T%ld   iniciada ----------- loop %d\n",id,i);
+//		printf("T%ld   iniciada ----------- loop %d\n",id,i);
 
 		if(id-i< 0) { notificarSaida(id); break;}//area de desistencia para threads que nao conseguem
 							 //mais acessar indices possiveis no vetor
@@ -203,7 +203,8 @@ int main(){
 	vetorEntrada = alocarVetor(tamanhoVetor);
 	vetorTeste = alocarVetor(tamanhoVetor);
 
-	puts("Forneca um vetor de entrada inserindo os numero separados por espaço\nExemplo: 1 2 3 4\n");
+	puts("Forneca um vetor de entrada inserindo os numero separados por espaço \ncom a quantidade de elementos sendo uma potencia de 2\nExemplo: 1 2 3 4\n");
+
 	while(scanf("%c", &entrada) && (entrada != '\n')){//aceita entradas ate receber enter
 		if(entrada == ' ') continue;
 		if(entrada == '-') {sinal *= -1; continue;}//artificio para entrada de numero negativos nao ser
