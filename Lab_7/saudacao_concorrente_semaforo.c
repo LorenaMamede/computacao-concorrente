@@ -1,6 +1,6 @@
 /* Disciplina: Computacao Concorrente */
 /* Aluna.: Lorena Mamede */
-/* Laboratório: 4 */
+/* Laboratório: 7 */
 
 /***** Condicao logica da aplicacao:   ****/
 
